@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const ItemDetail = (item, isLoading) => {
+const ItemDetail = ({item, isLoading}) => {
     if (isLoading) {
         return <h2>Loading...</h2>
     }
@@ -12,14 +12,15 @@ const ItemDetail = (item, isLoading) => {
 
     return (
     <div>
+        <img src={item.image} alt={item.name} />
         <h1>{item.name}</h1>
-        <p>{item.price}</p>
+        <p>${item.price}</p>
         <p>{item.category}</p>
     </div>
-)
-}
+);
+};
 
-ItemDetail.propType = {
+ItemDetail.propTypes = {
     item: PropTypes.object,
     isLoading: PropTypes.bool,
 };

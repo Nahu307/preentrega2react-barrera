@@ -1,12 +1,13 @@
 import CartWidget from "../CartWidget/CartWidget";
 import React from 'react';
 import { Link , NavLink } from "react-router-dom"
+import Logo from "../Dead-by-Daylight-Logo-Vector.svg-.png"
 const NavBar = () => {
     return (
         <nav>
             {}
             <h1>
-                <Link to="/">Dead By Daylight</Link>
+                <Link className="Title" to="/"><img src={Logo} alt="" /></Link>
             </h1>
             {}
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -14,10 +15,10 @@ const NavBar = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <NavLink to="/category/survivors">Supervivientes</NavLink> 
+                    <NavLink className="nav-link" aria-current="page" to="/category/Survivors">Supervivientes</NavLink> 
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/category/killers">Asesinos</NavLink> 
+                    <NavLink className="nav-link" to="/category/Killers">Asesinos</NavLink> 
                 </li>
             </ul>
         </div>

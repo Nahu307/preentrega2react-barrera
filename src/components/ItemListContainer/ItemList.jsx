@@ -12,7 +12,7 @@ const ItemList = ({items, isLoading}) => {
         <ul>
             {items.map((item) =>(
                 <li key={item.id}>
-                    <Link to={"/item/${item.id}"}>
+                    <Link to={'/item/${item.id}'}>
                     <h3>{item.name}</h3>
                     <p>${item.price}</p>
                     <p>{item.category}</p>
@@ -26,7 +26,7 @@ const ItemList = ({items, isLoading}) => {
 
 ItemList.propTypes  = {
     items: propTypes.array.isRequired,
-    item: propTypes.bool,
+    isLoading: propTypes.bool,
 };
 
 export default ItemList

@@ -1,14 +1,14 @@
 const products = [ 
-    {id:"1", name: "Skin Claudette", price:"15", category:"Survivors"},
-    {id:"2", name: "Skin Meg Thomas", price:"25", category:"Survivors"},
-    {id:"3", name: "Skin Kate Denson", price:"18", category:"Survivors"},
-    {id:"4", name: "Skin Michael Myers", price:"58", category:"Killers"},
-    {id:"3", name: "Skin Ghost Face", price:"35", category:"Killers"},
+    {id:"1", name: "Skin Claudette", price:"15", category:"Survivors", image:"../public/img/claudette.webp"},
+    {id:"2", name: "Skin Meg Thomas", price:"25", category:"Survivors",image:"../public/img/S02_charSelect_portrait.webp"},
+    {id:"3", name: "Skin Kate Denson", price:"18", category:"Survivors", image:"../public/img/S13_charSelect_portrait.webp"},
+    {id:"4", name: "Skin Michael Myers", price:"58", category:"Killers", image:"../public/img/Michael.webp"},
+    {id:"5", name: "Skin Ghost Face", price:"35", category:"Killers", image:"../public/img/Ghost.webp"},
 ]
 
 export const getProduct = (id) => {
     return new Promise((resolve, reject) => {
-        setTimeOut(() => {
+        setTimeout(() => {
             const product = products.find((p) => p.id === id);
             
             if (product) {
@@ -33,3 +33,5 @@ export const getProducts = (category) => {
         },1000);
     });
 };
+
+

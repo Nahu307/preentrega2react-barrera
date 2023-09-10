@@ -9,14 +9,12 @@ const ItemListContainer = () => {
     const { categoryId } = useParams();
 
     useEffect(() => {
+        console.log("useEffect", categoryId);
+        
         setIsLoading(true);
         getProducts(categoryId)
             .then((response) => {
                 setItems(response);
-                setIsLoading(false);
-            })
-            .catch((error) => {
-                console.error(error);
                 setIsLoading(false);
             });
     }, [categoryId]);
