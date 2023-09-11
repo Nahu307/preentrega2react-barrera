@@ -1,7 +1,7 @@
 import CartWidget from "../CartWidget/CartWidget";
 import React from 'react';
 import { Link , NavLink } from "react-router-dom"
-import Logo from "../Dead-by-Daylight-Logo-Vector.svg-.png"
+import Logo from "../../../public/img/Dead-by-Daylight-Logo-Vector.svg-.png"
 const NavBar = () => {
     return (
         <nav>
