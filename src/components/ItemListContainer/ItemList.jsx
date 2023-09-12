@@ -1,6 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types';
 import {Link} from "react-router-dom";
+import './ItemList.css';
 
 const ItemList = ({items, isLoading}) => {
     if(isLoading)
@@ -13,9 +14,9 @@ const ItemList = ({items, isLoading}) => {
             {items.map((item) =>(
                 <li key={item.id}>
                     <Link to={`/item/${item.id}`}>
-                    <h3>{item.name}</h3>
-                    <p>${item.price}</p>
-                    <p>{item.category}</p>
+                    <h3 className='titleList'>{item.name}</h3>
+                    <p className='price'>${item.price}</p>
+                    <p className='category'>{item.category}</p>
                     </Link>
                 </li>
             ))}
