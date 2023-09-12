@@ -12,10 +12,10 @@ const ItemList = ({items, isLoading}) => {
         <ul>
             {items.map((item) =>(
                 <li key={item.id}>
-                    <Link to={'/item/${item.id}'}>
-                    <h3 className='titleH3'>{item.name}</h3>
-                    <p className='price'>${item.price}</p>
-                    <p className='category'>{item.category}</p>
+                    <Link to={`/item/${item.id}`}>
+                    <h3>{item.name}</h3>
+                    <p>${item.price}</p>
+                    <p>{item.category}</p>
                     </Link>
                 </li>
             ))}
