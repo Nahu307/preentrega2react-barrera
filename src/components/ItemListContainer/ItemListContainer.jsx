@@ -9,12 +9,18 @@ const ItemListContainer = () => {
     const { categoryId } = useParams();
 
     useEffect(() => {
-        console.log("useEffect", categoryId);
-        
+        // Inicio de la carga de datos
         setIsLoading(true);
+
         getProducts(categoryId)
-            .then((response) => {
-                setItems(response);
+            .then((products) => {
+                // Éxito en la carga de datos
+                setItems(products);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                // Manejo de errores
+                console.error("Error al cargar los productos:", error);
                 setIsLoading(false);
             });
     }, [categoryId]);

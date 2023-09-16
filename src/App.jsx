@@ -1,27 +1,24 @@
-import { useState } from 'react'
-import './App.css'
-import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import CartWidget from './components/CartWidget/CartWidget';
-import { Routes , Route } from "react-router-dom";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import NavBarStyle from "./components/NavBar/NavBar.css"
+import CartWidget from './components/CartWidget/CartWidget';
 
 function App() {
-  const [count, setCount] = useState(0)
   return (
-    <>
-      <div>
-      <NavBar/>
-      <CartWidget/> 
+    <div>
+      <NavBar />
+      <CartWidget />
       <Routes>
-        <Route path='/' element = {<ItemListContainer/>} />
-        <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
-        <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:categoryId" element={<ItemListContainer />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
       </Routes>
-      </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
+
